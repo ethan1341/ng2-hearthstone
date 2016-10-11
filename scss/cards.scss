@@ -1,0 +1,33 @@
+.display-card{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  align-items: center;
+}
+.display-cards{
+
+}
+.display-card img{
+  width:150px;
+  height:200px;
+}
+.body{
+  height:100%;
+}
+.body,.header{
+  background-color: rgba(0,0,0,0.8);
+  color:#898989;
+}
+.header{
+  border-bottom:2px dashed #898989;
+}
+
+.display-deck{
+  box-sizing: border-box;
+  border:1px solid grey;
+  margin-top:30px;
+
+  height:75%;
+}

@@ -1,0 +1,15 @@
+
+<div class="display-deck col-xs-4" *ngIf="deckCards.length > 0">
+  hello
+  <div *ngFor = 'let cards of deckCards'>
+    {{cards.name}}
+    {{cards.cost}}
+  </div>
+</div>
+
+<div class="display-deck col-xs-4" *ngIf="deckCards.length == 0">
+  1. Select your cards.<br>
+  2. Once at 30 cards save the deck.<br>
+  3. Share then go play with your friends.<br>
+</div>
+

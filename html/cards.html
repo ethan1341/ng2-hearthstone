@@ -1,0 +1,32 @@
+<div class="container">
+  <table width="135" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose GeoTrust SSL for secure e-commerce and confidential communications.">
+    <tr>
+      <td width="135" align="center" valign="top"><script type="text/javascript" src="https://seal.geotrust.com/getgeotrustsslseal?host_name=www.project5marketing.com&amp;size=M&amp;lang=en"></script><br />
+        <a href="http://www.geotrust.com/ssl/" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;"></a></td>
+    </tr>
+  </table>
+  <div class="col-xs-12 header">
+    <div class="col-xs-2" *ngFor="let heroClass of heroClasses ">
+      <label>
+        <input type=radio [(ngModel)]="filterSelect[heroClass]" value="{{heroClass}}"
+               (ngModelChange)=filterClass(heroClass)>
+        {{heroClass}} {{filterSelect[heroClass]}}
+      </label>
+    </div>
+  </div>
+
+  <div class="col-xs-12 body">
+    <div *ngIf="displayCards.length == 0">
+      Please select a Class
+    </div>
+    <div class="col-xs-8 display-cards" *ngIf="displayCards.length > 0">
+      <div *ngIf="displayCards.length > 0">
+        <div *ngFor="let card of displayCards" class="col-xs-3 display-card">
+          <img src="http://wow.zamimg.com/images/hearthstone/cards/enus/original/{{card.cardId}}.png" (click) = "addToDeck(card)" >
+        </div>
+      </div>
+    </div>
+    <new-deck [deckCards] = deckCards></new-deck>
+  </div>
+</div>
+
